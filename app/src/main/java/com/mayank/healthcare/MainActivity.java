@@ -53,8 +53,13 @@ public class MainActivity extends Activity implements OnItemClickListener {
                             long id) {
 
         String member_name = rowItems.get(position).getMember_name();
-        Toast.makeText(getApplicationContext(), "" + member_name,
-                Toast.LENGTH_SHORT).show();
+        if(position==1){
+
+
+
+        }
+
+
     }
 
 }
