@@ -1,6 +1,7 @@
 package com.mayank.healthcare;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity implements OnItemClickListener {
+public class MainActivity extends Activity  {
 
     String[] member_names;
     TypedArray profile_pics;
@@ -44,22 +45,26 @@ public class MainActivity extends Activity implements OnItemClickListener {
         CustomAdapter adapter = new CustomAdapter(this, rowItems);
         mylistview.setAdapter(adapter);
 
-        mylistview.setOnItemClickListener(this);
+        mylistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+
+                switch (position) {
+                    case 0:
+                        Intent newActivity = new Intent(MainActivity.this, symptomsneed.class);
+                        startActivity(newActivity);
+                        break;
+
+                }
+
+
+            }
+
+
+        }  );
     }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position,
-                            long id) {
-
-        String member_name = rowItems.get(position).getMember_name();
-        if(position==1){
-
-
-
-        }
-
-
-    }
-
 }
