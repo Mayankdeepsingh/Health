@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Health Care</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Names -->
+    <string-array name="Member_names">
+        <item>Symptomps Checker</item>
+        <item>Conditions</item>
+        <item>Medicine</item>
+        <item>First Aid Information</item>
+        <item>Medical Terms</item>
+        <item>Test and Procedure</item>
+    </string-array>
+
+    <!-- Pictures -->
+    <array name="profile_pics">
+        <item>@drawable/body</item>
+        <item>@drawable/symptoms</item>
+        <item>@drawable/medicine</item>
+        <item>@drawable/firstaid</item>
+        <item>@drawable/medicalterms</item>
+        <item>@drawable/test</item>
+    </array>
+
+
+</resources>
